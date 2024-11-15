@@ -1,0 +1,175 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #2e8555;
+  --ifm-color-primary-dark: #29784c;
+  --ifm-color-primary-darker: #277148;
+  --ifm-color-primary-darkest: #205d3b;
+  --ifm-color-primary-light: #33925d;
+  --ifm-color-primary-lighter: #359962;
+  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #25c2a0;
+  --ifm-color-primary-dark: #21af90;
+  --ifm-color-primary-darker: #1fa588;
+  --ifm-color-primary-darkest: #1a8870;
+  --ifm-color-primary-light: #29d5b0;
+  --ifm-color-primary-lighter: #32d8b4;
+  --ifm-color-primary-lightest: #4fddbf;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+.email-black {
+  color: black !important;
+}
+
+@keyframes pulseSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes gradientBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animated-background {
+  background: linear-gradient(270deg, #ff5733, #33c1ff, #28b463, #f39c12);
+  background-size: 1000% 1000%;
+  animation: gradientBackground 20s ease infinite;
+  padding: 50px;
+  text-align: center;
+  color: white;
+}
+
+.animated-background h1, .animated-background p {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.welcome-message {
+  animation: pulseSlide 20s ease-in-out infinite;
+  font-size: 1.5em;
+  color: #FF5733;
+  text-align: center;
+}
+
+.subtitle-text {
+  animation: pulseSlide 20s ease-in-out infinite;
+  font-size: 1em;
+  color: #0f0f0fee;
+  text-align: center;
+}
+
+
+/* Animation pour agrandir et réduire légèrement le bloc */
+@keyframes zoomInOut {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Animation pour un effet de rebond sur le texte */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Applique l'animation de pulsation sur les blocs */
+.animated-skill {
+  animation: zoomInOut 3s ease-in-out infinite;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  width: 150px;
+  transition: transform 0.2s ease;
+}
+
+/* Animation d'entrée pour les coordonnées */
+.coordonnees-item {
+  opacity: 0;
+  animation: fadeIn 2s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+.coordonnees-item:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.coordonnees-item:nth-child(3) {
+  animation-delay: 1.5s;
+}
+
+/* Style des éléments de la liste */
+.coordonnees ul {
+  margin: 0;
+  padding: 0;
+}
+
+.coordonnees-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  color: #333;
+  opacity: 0;
+  animation: fadeIn 10s ease-in-out infinite;
+}
+
+/* Animation pour l'apparition */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+}
+
+/* Style pour les images */
+.coordonnees-img {
+  width: 50px; /* taille de l'icône */
+  margin-right: 25px;
+}
+
+/* Style des éléments textuels */
+.coordonnees-item strong {
+  font-weight: bold;
+}
